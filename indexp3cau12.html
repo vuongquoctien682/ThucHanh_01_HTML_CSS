@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Khảo Sát Ý Kiến Người Dùng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="survey-container">
+        <h1>Khảo sát ý kiến người dùng</h1>
+        <form action="/submit" method="POST">
+            <div class="question">
+                <label for="rating">Bạn đánh giá dịch vụ của chúng tôi như thế nào?</label>
+                <div class="options">
+                    <input type="radio" id="excellent" name="rating" value="excellent">
+                    <label for="excellent">Tuyệt vời</label>
+
+                    <input type="radio" id="good" name="rating" value="good">
+                    <label for="good">Tốt</label>
+
+                    <input type="radio" id="average" name="rating" value="average">
+                    <label for="average">Bình thường</label>
+
+                    <input type="radio" id="poor" name="rating" value="poor">
+                    <label for="poor">Kém</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="newsletter">Bạn có muốn nhận thông tin khuyến mãi qua email không?</label>
+                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                <label for="newsletter">Có</label>
+            </div>
+
+            <div class="question">
+                <label for="feedback">Ý kiến đóng góp của bạn (nếu có):</label>
+                <textarea id="feedback" name="feedback" rows="5" placeholder="Nhập ý kiến của bạn..."></textarea>
+            </div>
+
+            <div class="question">
+                <label for="age">Chọn độ tuổi của bạn:</label>
+                <select id="age" name="age">
+                    <option value="under18">Dưới 18</option>
+                    <option value="18-24">18 - 24</option>
+                    <option value="25-34">25 - 34</option>
+                    <option value="35-44">35 - 44</option>
+                    <option value="45-54">45 - 54</option>
+                    <option value="55+">Trên 55</option>
+                </select>
+            </div>
+
+            <button type="submit">Gửi khảo sát</button>
+        </form>
+    </div>
+</body>
+
+</html>
