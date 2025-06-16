@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORM đk tt cá nhân</title>
+    <style>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+input, select, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+button:hover {
+    background-color: #007BFF;
+    color: white;
+}</style>
 </head>
-
 <body>
-    <h1 style="color:turquoise;"> Biểu mẫu đăng ký thông tin cá nhân</h1>
-    <p>Tên:</p>
-    <p>Email:</p>
-    <p>Số điện thoại:</p>
-    <p>Giới tính:</p>
-    <button>Gửi</button>
+    <form>
+        <h2>Form Đăng Ký Thông Tin</h2>
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Số điện thoại" required>
+        <select required>
+            <option value="">Chọn giới tính</option>
+            <option value="nam">Nam</option>
+            <option value="nu">Nữ</option>
+            <option value="khac">Khác</option>
+        </select>
+        <button type="submit">Gửi</button>
+    </form>
 </body>
-
 </html>

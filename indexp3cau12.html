@@ -1,60 +1,113 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Khảo Sát Ý Kiến Người Dùng</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khảo sát ý kiến người dùng</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .survey-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .question label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .options label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-weight: normal;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      accent-color: #0077cc;
+      cursor: pointer;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="survey-container">
-        <h1>Khảo sát ý kiến người dùng</h1>
-        <form action="/submit" method="POST">
-            <div class="question">
-                <label for="rating">Bạn đánh giá dịch vụ của chúng tôi như thế nào?</label>
-                <div class="options">
-                    <input type="radio" id="excellent" name="rating" value="excellent">
-                    <label for="excellent">Tuyệt vời</label>
 
-                    <input type="radio" id="good" name="rating" value="good">
-                    <label for="good">Tốt</label>
+  <div class="survey-container">
+    <h1>Khảo sát ý kiến người dùng</h1>
+    <form action="/submit" method="POST">
+      
+      <div class="question">
+        <label>Bạn đánh giá chất lượng dịch vụ của chúng tôi như thế nào?</label>
+        <div class="options">
+          <label><input type="radio" name="rating" value="excellent"> Tuyệt vời</label>
+          <label><input type="radio" name="rating" value="good"> Tốt</label>
+          <label><input type="radio" name="rating" value="average"> Bình thường</label>
+          <label><input type="radio" name="rating" value="poor"> Kém</label>
+        </div>
+      </div>
 
-                    <input type="radio" id="average" name="rating" value="average">
-                    <label for="average">Bình thường</label>
+      <div class="question">
+        <label><input type="checkbox" name="newsletter" value="yes"> Tôi muốn nhận thông tin khuyến mãi qua email</label>
+      </div>
 
-                    <input type="radio" id="poor" name="rating" value="poor">
-                    <label for="poor">Kém</label>
-                </div>
-            </div>
+      <div class="question">
+        <label for="feedback">Ý kiến đóng góp (nếu có):</label>
+        <textarea id="feedback" name="feedback" rows="5" placeholder="Nhập ý kiến của bạn..."></textarea>
+      </div>
 
-            <div class="question">
-                <label for="newsletter">Bạn có muốn nhận thông tin khuyến mãi qua email không?</label>
-                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
-                <label for="newsletter">Có</label>
-            </div>
+      <button type="submit">Gửi khảo sát</button>
+    </form>
+  </div>
 
-            <div class="question">
-                <label for="feedback">Ý kiến đóng góp của bạn (nếu có):</label>
-                <textarea id="feedback" name="feedback" rows="5" placeholder="Nhập ý kiến của bạn..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="age">Chọn độ tuổi của bạn:</label>
-                <select id="age" name="age">
-                    <option value="under18">Dưới 18</option>
-                    <option value="18-24">18 - 24</option>
-                    <option value="25-34">25 - 34</option>
-                    <option value="35-44">35 - 44</option>
-                    <option value="45-54">45 - 54</option>
-                    <option value="55+">Trên 55</option>
-                </select>
-            </div>
-
-            <button type="submit">Gửi khảo sát</button>
-        </form>
-    </div>
 </body>
-
 </html>

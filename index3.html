@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thời khóa biểu</title>
+    <style>body {
+    background-color:aquamarine;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 40px;
+}
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse ;
+}
+th, td {
+    border: 2px solid #333;
+    padding: 12px;
+    text-align: center;
+}
+th {
+    background-color: #4acf50;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color:aqua
+}
+tr:nth-child(odd) {
+    background-color:blueviolet
+}
+tr:hover {
+    background-color: red;
+}</style>
 </head>
-
 <body>
+    <h1>Thời Khoá Biểu</h1>
     <table>
-        <p>Thứ</p>
-        <p>Môn học</p>
-        <p>Giờ học</p>
-        <p>Phòng học</p>
+        <tr>
+            <th>Thứ</th>
+            <th>Môn học</th>
+            <th>Giờ học</th>
+            <th>Phòng học</th>
+        </tr>
+        <tr><td>Hai</td><td>Toán</td><td>7:00 - 8:30</td><td>A101</td></tr>
+        <tr><td>Ba</td><td>Lý</td><td>8:45 - 10:15</td><td>A102</td></tr>
+        <tr><td>Tư</td><td>Hóa</td><td>10:30 - 12:00</td><td>B201</td></tr>
+        <tr><td>Năm</td><td>Văn</td><td>13:00 - 14:30</td><td>C301</td></tr>
+        <tr><td>Sáu</td><td>Tiếng Anh</td><td>14:45 - 16:15</td><td>D401</td></tr>
     </table>
 </body>
-
 </html>

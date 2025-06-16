@@ -1,28 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanh toán đơn hàng</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh toán đơn hàng</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f6f8fa, #eaf4ff);
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    select {
+      background-color: #fff;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #0077cc;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
     <h1>Bill thanh toán đơn hàng</h1>
-    <p>
-        Thông tin cá nhân: <br>
-        <textarea name="special" cols="35" rows="5"></textarea>
-    </p>
-    <p>
-        Địa chỉ: <br>
-        <textarea name="special" cols="30" rows="2"></textarea>
-    </p>
-    <form>
-        <p>
-            Hình thức thanh toán: <br>
-            <select name="rating">
-                <option value="1">Chuyển khoản</option>
-                <option value="2">Tiền mặt</option>
-            </select>
-        </p>
 
+    <p>
+      <label>Thông tin cá nhân:</label>
+      <textarea name="info" cols="35" rows="5"></textarea>
+    </p>
+
+    <p>
+      <label>Địa chỉ:</label>
+      <textarea name="address" cols="30" rows="2"></textarea>
+    </p>
+
+    <form>
+      <p>
+        <label>Hình thức thanh toán:</label>
+        <select name="payment">
+          <option value="1">Chuyển khoản</option>
+          <option value="2">Tiền mặt</option>
+        </select>
+      </p>
+
+      <button type="submit">Xác nhận thanh toán</button>
+    </form>
+  </div>
 </body>
 </html>

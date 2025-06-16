@@ -5,11 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiển thị ảnh và mô tả ảnh</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        img {
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            height: auto;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
-    <img src="https://fansipanlegend.sunworld.vn/wp-content/uploads/2024/03/cam-nang-kham-pha-fansipan.jpg" alt="">
-    <figcaption>Ảnh đại diện</figcaption>
+    <figure>
+        <img src="https://fansipanlegend.sunworld.vn/wp-content/uploads/2024/03/cam-nang-kham-pha-fansipan.jpg" alt="">
+        <figcaption>Ảnh đại diện</figcaption>
+    </figure>
 </body>
 
 </html>

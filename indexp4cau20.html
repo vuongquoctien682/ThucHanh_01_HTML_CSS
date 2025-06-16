@@ -3,39 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <title>CV Cá Nhân</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .cv-container {
+      display: flex;
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: #fff;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .left-column {
+      width: 35%;
+      background-color: #e0f7fa;
+      padding: 30px;
+    }
+
+    .right-column {
+      width: 65%;
+      background-color: #f5f5f5;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-top: 0;
+      color: #00796b;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      color: #00796b;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    strong {
+      color: #333;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Tên của bạn</h1>
-  <p><strong>Email:</strong> emailcuaban@example.com</p>
-  <p><strong>Điện thoại:</strong> 0.xxx.xxx.xxx</p>
-  <p><strong>Địa chỉ:</strong> Tổ, số, Phường, TP, Tỉnh</p>
+  <div class="cv-container">
+    <!-- Cột trái: Thông tin + kỹ năng -->
+    <div class="left-column">
+      <h1>Tên của bạn</h1>
+      <p><strong>Email:</strong> email@example.com</p>
+      <p><strong>Điện thoại:</strong> 0xxx xxx xxx</p>
+      <p><strong>Địa chỉ:</strong> Số nhà, Phường, Quận, TP</p>
 
-  <hr>
+      <h2>Kỹ năng</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, Git, Figma</li>
+        <li>Kỹ năng giao tiếp & teamwork</li>
+        <li>Tiếng Anh giao tiếp</li>
+      </ul>
+    </div>
 
-  <h2>Kỹ năng</h2>
-  <ul>
-    <li>HTML, CSS, JavaScript</li>
-    <li>Kỹ năng làm việc nhóm</li>
-    <li>Giao tiếp và thuyết trình</li>
-    <li>Tiếng Anh giao tiếp</li>
-  </ul>
+    <!-- Cột phải: Học vấn -->
+    <div class="right-column">
+      <h2>Học vấn</h2>
+      <ul>
+        <li><strong>Đại học Công nghệ TP.HCM (HUTECH)</strong><br>
+        Ngành: Công nghệ thông tin (2018 – 2022)<br>
+        GPA: 3.2/4.0</li>
+      </ul>
 
-  <h2>Kinh nghiệm làm việc</h2>
-  <ul>
-    <li><strong>Công ty XYZ</strong> – Lập trình viên front-end (2022 - nay)
-      <br>Tham gia phát triển giao diện người dùng cho website thương mại điện tử.
-    </li>
-    <li><strong>Công ty ABC</strong> – Thực tập sinh IT (2021)
-      <br>Hỗ trợ kiểm thử và bảo trì hệ thống phần mềm nội bộ.
-    </li>
-  </ul>
-
-  <h2>Học vấn</h2>
-  <ul>
-    <li><strong>Đại học Công nghệ TP.HCM (HUTECH)</strong> – Ngành Công nghệ thông tin (2018 - 2022)</li>
-    <li>Tốt nghiệp loại Khá, GPA: 3.2/4.0</li>
-  </ul>
+      <h2>Kinh nghiệm</h2>
+      <ul>
+        <li><strong>Công ty ABC</strong> – Thực tập sinh IT (2021)<br>
+          Hỗ trợ kiểm thử, bảo trì hệ thống phần mềm nội bộ.
+        </li>
+        <li><strong>Công ty XYZ</strong> – Lập trình viên Front-end (2022 – nay)<br>
+          Phát triển giao diện web thương mại điện tử.
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </body>
 </html>
